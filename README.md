@@ -1,7 +1,5 @@
-# Gilad's Thesaurus Engine
-### My attempt at a (nonsensical) synonym replacement program.
-
-Or the *Lexical Locuming Locomotive*, as it likes to call itself.
+# Thesaurus Engine
+This is my attempt at a (nonsensical) synonym replacement program, or a *Lexical Locuming Locomotive*, as it likes to call itself.
 
 <br/>
 <br/>
