@@ -1,5 +1,5 @@
 # Thesaurus Engine
-### This is my attempt at a (nonsensical) synonym replacement program —— or a *lexical locuming locomotive*, as it likes to call itself.
+### This is my attempt at a (nonsensical) synonym replacement program — or a *lexical locuming locomotive*, as it likes to call itself.
 
 <br/>
 <br/>
