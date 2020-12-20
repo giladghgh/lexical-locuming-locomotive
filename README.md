@@ -1,4 +1,4 @@
-# The Lexical Locuming Locomotive
-### My attempt at a (nonsensical) synonym replacement engine.
+# Gilad's Thesaurus Engine
+### My attempt at a (nonsensical) synonym replacement programme.
 
-Yes the title was generated through this programme.
+Or the Lexical Locuming Locomotive, as it likes to call itself.
