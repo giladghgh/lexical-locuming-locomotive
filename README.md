@@ -4,7 +4,6 @@
 <br/>
 <br/>
 <br/>
-<br/>
 
 The `Thesaurus-Engine.exe` code differs to the original source code slightly. The source is a bit less... polished, so traverse that with care and read the commenting.
 
