@@ -1,2 +1,2 @@
-# wordfinder-widget
-My attempt at (nonsensical) synonym replacement.
+# The Lexical Locuming Locomotive
+My attempt at a (nonsensical) synonym replacement engine.
