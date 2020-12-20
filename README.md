@@ -3,14 +3,10 @@
 
 Or the *Lexical Locuming Locomotive*, as it likes to call itself.
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
 
-###### When you run the executable `Thesaurus-Engine.exe`, you have two options:
+
+
+#### When you run the executable `Thesaurus-Engine.exe`, you have two options:
 ###### 1)
 Use the code you've pasted into `input.txt`. To do this enter "file" (no quotes) when prompted for text. This is useful for larger text.
 ###### 2)
