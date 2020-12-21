@@ -13,6 +13,6 @@ Instructions are given on start, but before running it you have a choice to make
 <br/>
 <br/>
 
-Note that this will **not** fix your spelling, punctuation, or grammar. In fact, these will only be made worse.
+Note that this will **not** fix your spelling, punctuation, or grammar. In fact, these will only be made worse if entered wrong.
 
 The notebook (original file) is somewhat... unpolished, so traverse that with care and read the commenting.
