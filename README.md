@@ -7,7 +7,7 @@ The main program is `ThesaurusEngine.py`. Non-standard requisites are: `numpy`,`
 
 Instructions are given on start, but before running it you have a choice to make:
 ###### 1) Paste your raw text into `input.txt`. This is useful for larger text.
-###### 2) For smaller text (e.g. single sentences), just paste directly into the console.
+###### 2) For smaller text (e.g. single sentences), just type/paste directly into the console.
 
 <br/>
 <br/>
