@@ -14,6 +14,4 @@ The main program is `ThesaurusEngine.py`. Before running it though, you have a c
 
 Note that this will **not** fix your spelling, punctuation, or spelling. In fact, these will only be made worse and may break the output.
 
-<br/>
-
 The notebook (original file) is a bit less... polished, so traverse that with care and read the commenting.
