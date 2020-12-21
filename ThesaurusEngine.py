@@ -200,7 +200,7 @@ def assemble(wordtags):
                         \s+(?=[]})])      # (at least one whitespace)  preceding  ((any single closing bracket))
                         ''', '' , final , flags=re.VERBOSE)
 
-    return "\nFINAL:\n" + final
+    return final
 
 
 
@@ -224,5 +224,5 @@ if __name__ == '__main__':
 
     inflectedText = inflectivise(synonymText)
 
-    print(assemble(inflectedText))
+    print("\nFINAL:\n" + assemble(inflectedText))
     input("\n\n\nPress enter to exit.")
