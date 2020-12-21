@@ -5,8 +5,12 @@
 <br/>
 <br/>
 
-The `ThesaurusEngine.exe` code differs to the original source code slightly. The source is a bit less... polished, so traverse that with care and read the commenting.
+The main program is `ThesaurusEngine.py`. Before running it though, you have a choice to make:
+###### 1) Paste your raw text into `input.txt`. This is useful for larger text.
+###### 2) For smaller text (e.g. single sentences), just paste directly into the console.
 
-When you run the executable `ThesaurusEngine.exe`, you have two options:
-###### 1) Use the code you've pasted into `input.txt`. To do this enter, "file" (no quotes) when prompted for text. This is useful for larger text.
-###### 2) For smaller text, just paste directly into the command line.
+Note that this will **not** fix your spelling, punctuation, or spelling. In fact, these will only be made worse and may break the output.
+
+<br/>
+
+The notebook (original file) is a bit less... polished, so traverse that with care and read the commenting.
