@@ -2,6 +2,7 @@
 #### This is my attempt at a (nonsensical) synonym replacement program — or a *lexical locuming locomotive*, as it likes to call itself.
 
 <br/>
+<br/>
 
 The main program is `ThesaurusEngine.py`. Non-standard requisites are: `numpy`,`nltk`, and `lemminflect`. You can `pip install` all of these at the start of the Jupyter file, if you uncomment the relevant lines.
 
