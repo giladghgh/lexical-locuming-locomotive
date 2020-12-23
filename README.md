@@ -5,8 +5,9 @@
 <br/>
 
 The main program is `ThesaurusEngine.py`. I've tried countless methods to pack it into an executable but `lemminflect` seems to disagree with all of them.
-
 Non-standard requisites are: `numpy`,`nltk`, and `lemminflect`. You can `pip install` all of these at the start of the Jupyter file, if you uncomment the relevant lines.
+
+<br/>
 
 Instructions are given on start, but before running it you have a choice to make:
 ###### 1) Paste your raw text into `input.txt`. This is useful for larger text.
