@@ -27,7 +27,7 @@ The main program is `ThesaurusEngine.py`. My best efforts to package this into a
 
 #### Dependencies
 
-You will need to run the following commands as part of the installation (these commands are present but commented in both the `py` and `ipynb` files):
+You will need to run the following commands as part of the installation (these commands are present but commented in the `ipynb` file):
 
 - `pip install nltk`
 - `pip install numpy`
@@ -56,7 +56,7 @@ Press enter to exit.
 
 ## License
 
-[Everything here is completely unlincensed](LICENSE.md).
+[Everything here is completely unlincensed](LICENSE).
 
 ---
 
