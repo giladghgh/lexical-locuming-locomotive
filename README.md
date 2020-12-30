@@ -37,7 +37,7 @@ You will need to run the following commands as part of the installation (these c
 
 The user interface will prompt you for a direct input, or for the command to read input from `input.txt`. Using the pre-emptive text loaded into `input.txt`, this is one console output example:
 
-```python
+```shell
 Enter grammatically correct text below so I can synonymise it, or enter "file" (no quotes) to read from input.txt:
 file
 
