@@ -22,7 +22,9 @@ A WordNet synonym engine, which seemingly takes any text input and gives it an 1
 
 ## Briefing
 
-The main program is `ThesaurusEngine.py`. My best efforts to package this into an executable were in vain. I've tried countless methods but `lemminflect` seems to disagree with all of them. Note that this program will **not** fix your spelling, punctuation, and/or grammar. In fact, these will only be made worse if entered wrong.
+The main program is `ThesaurusEngine.py`. My best efforts to package this into an executable were in vain. I've tried countless methods but `lemminflect` seems to disagree with all of them. 
+
+Note that this program will **not** fix your spelling, punctuation, and/or grammar. In fact, these will only be made worse if entered wrong.
 
 #### Dependencies
 
@@ -55,7 +57,7 @@ Press enter to exit.
 
 ## License
 
-[Everything here is completely unlincensed](LICENSE).
+Everything you see is wholly [unlincensed](LICENSE).
 
 ---
 
