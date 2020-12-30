@@ -10,7 +10,6 @@
 
 - [Overview](#overview)
 - [Briefing](#how-to-use)
-- [References](#references)
 - [License](#license)
 
 ---
