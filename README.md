@@ -36,7 +36,7 @@ You will need to run the following commands as part of the installation (these c
 
 #### Interface
 
-The user interface will prompt you for a direct input, or for the command to read input from `input.txt`. Using the pre-emptive text loaded into `input.txt`, this is one console output example:
+The user interface will prompt you for a direct input, or for the command to read input from `input.txt`. Using the text pre-loaded into `input.txt`, this is an example of one possible console output:
 
 ```shell
 Enter grammatically correct text below so I can synonymise it, or enter "file" (no quotes) to read from input.txt:
