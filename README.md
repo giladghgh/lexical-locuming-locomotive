@@ -6,14 +6,6 @@
 
 ---
 
-### Table of Contents
-
-- [Overview](#overview)
-- [Briefing](#briefing)
-- [License](#license)
-
----
-
 ## Overview
 
 A WordNet synonym engine, which seemingly takes any text input and gives it an 1850's vernacular.
