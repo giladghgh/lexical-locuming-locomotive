@@ -14,7 +14,9 @@ from numpy.random import choice
 from nltk.corpus import wordnet as wn
 from lemminflect import getInflection,getLemma
 
+
 Tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
+
 logger = logging.getLogger()
 
 
@@ -29,7 +31,7 @@ ParenStr = '«»()[]{}<>"'
 ParenSet = set(ParenStr)
 
 
-# words with these WordNet tags can be synonymised:
+# words with these WordNet tags CAN be synonymised:
 # n: noun
 # v: verb
 # a: adjective
@@ -46,15 +48,10 @@ TheCracks = ["have", "has", "had", "be", "is", "was", "are", "been", "do", "does
 CracksDict = {'have': 'have', 'has': 'have', 'had': 'have', 'be': 'be', 'is': 'be', 'was': 'be', 'are': 'be', 'been': 'be', 'do': 'do', 'does': 'do', 'did': 'do'}
 
 
-# fodder:
-text0 = """'One day, the people (that don't even like / love you) are going to tell everyone how they met you' -- Mr. Johnny Depp. What a terrible quote from a hot.com person."""
-
-text1 = """word replacement engine"""
-
 
 # ### Functions
 
-# supplementary
+# private
 def _translateTag(tag , fmt):
     """ Convert tags from universal tagset to either WordNet or LemmInflect format. """
     # shouldn't handle MOD or AUX tags, those should bypass this as they are immutable.
@@ -72,7 +69,7 @@ def _translateTag(tag , fmt):
 
 def _synoname(wordobj):
     """ Return just the synonym (no metadata) from a WordNet synset object. """
-    # surely there's an 'official' way to retrieve the word?
+    # surely there's an 'official' way to retrieve the word??
     return wordobj.name().split('.')[0] if type(wordobj) is nltk.corpus.reader.wordnet.Synset else wordobj
 
 
@@ -80,7 +77,7 @@ def _synoname(wordobj):
 
 # principal
 def extract(raw):
-    """ Extract information from text at the word level, unaggregated. """
+    """ Extract information from text at the word level, unaggregated (e.g. at the sentence level). """
     # builds [("word1","tag1") , ("word2","tag2") , ... ]
     wordtags = nltk.pos_tag( nltk.word_tokenize(raw) )
     return list(map( lambda wt:(wt[0].lower() , wt[1]) , wordtags ))
@@ -90,6 +87,7 @@ def lemmatise(wordtags):
     """ Find and filter valid lemmas. """
     for word,tag in wordtags:
         liTag = _translateTag(tag,"LI")
+        # the following do not get replaced as WordNet can't handle these properly: (LEN < 3 is precautionary & probably unecessary)
         if (tag in ["NNP"]) or (word in TheCracks) or (len(word) < 3) or not liTag:
             lemma = word
         else:
@@ -101,12 +99,12 @@ def lemmatise(wordtags):
 def synonymise(wordtags):
     """ Find and filter valid synonyms"""
     for word,tag in wordtags:
-        # again, the following get a free pass because NLP is still neotenous:
+        # again, the following get a free pass:
         if (tag in ["NNP"]) or (word in TheCracks) or (len(word) < 3):
             yield word,tag
             continue
             
-        # facilitate discussion between libraries:
+        # translate the POS tags:
         wnTag = _translateTag(tag,"WN")
         
         # collect possible synonyms:
@@ -132,7 +130,7 @@ def synonymise(wordtags):
         yield synonym.lower(),tag
 
 
-def inflectivise(wordtags):
+def inflect(wordtags):
     """ Inflect list of (word,tag) tuples correctly. """
     wordtaglist = list(wordtags)
     for i,(word,tag) in enumerate(wordtaglist):
@@ -192,9 +190,9 @@ def assemble(wordtags):
     final = ' '.join(sentences)
     
     # spacing surrounding parenthesese:
-    final = re.sub( r'''(?<=[{[(])\s+     # ((any single opening bracket))  preceding  (at least one whitespace)
+    final = re.sub( r'''(?<=[{[(])\s+     # ((any single OPENING bracket))  preceding  (at least one whitespace)
                         |                 # or
-                        \s+(?=[]})])      # (at least one whitespace)  preceding  ((any single closing bracket))
+                        \s+(?=[]})])      # (at least one whitespace)  preceding  ((any single CLOSING bracket))
                         ''', '' , final , flags=re.VERBOSE)
 
     return final
@@ -219,7 +217,7 @@ if __name__ == '__main__':
 
     synonymText = synonymise(lemmaText)
 
-    inflectedText = inflectivise(synonymText)
+    inflectedText = inflect(synonymText)
 
     print("\nFINAL:\n" + assemble(inflectedText))
     input("\n\n\nPress enter to exit.")
