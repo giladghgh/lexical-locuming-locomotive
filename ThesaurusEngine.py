@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Maximising phoneme distribution in my MEng dissertation abstract.
-# ### *Clunky, flashy, and somewhat trashy.*
 
-# 
-# 
+
 
 # ### Preamble
 
