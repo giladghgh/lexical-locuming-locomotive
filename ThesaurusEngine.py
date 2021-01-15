@@ -24,7 +24,7 @@ logger = logging.getLogger()
 PunctStr = '!#$%&\'*+-/=/?@\\^_`|~'
 PunctSet = set(PunctStr)
 
-DelimStr = ',.;:'
+DelimStr = ',.;:?!'
 DelimSet = set(DelimStr)
 
 ParenStr = '«»()[]{}<>"'
