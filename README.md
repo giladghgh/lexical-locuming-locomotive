@@ -14,13 +14,13 @@ A WordNet synonym engine, which seemingly takes any text input and gives it an 1
 
 ## Briefing
 
-The main program is `ThesaurusEngine.py`. My best efforts to package this into an executable were in vain. I've tried countless methods but `lemminflect` seems to disagree with all of them. 
+The main program is `ThesaurusEngine.py`. My best efforts to package this into an executable were in vain. I've tried many but `lemminflect` seems to disagree with them all. 
 
-Note that this program will **not** fix your spelling, punctuation, and/or grammar. In fact, these will only be made worse if entered wrong.
+Note that this program will **not** fix your spelling, punctuation, and grammar. These will only be made worse if entered wrong.
 
 #### Dependencies
 
-You will need to run the following commands as part of the installation (these commands are present but commented in the `ipynb` file):
+You will need to run the following commands as part of the installation (these are present but commented in the `ipynb` file):
 
 - `pip install nltk`
 - `pip install numpy`
