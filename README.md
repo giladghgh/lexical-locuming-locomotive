@@ -49,7 +49,7 @@ Press enter to exit.
 
 ## License
 
-Everything you see is wholly [unlincensed](LICENSE).
+Everything you see is [unlincensed](LICENSE).
 
 ---
 
