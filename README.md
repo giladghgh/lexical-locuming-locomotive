@@ -14,9 +14,9 @@ A WordNet synonym engine, which seemingly takes any text input and gives it an 1
 
 ## Briefing
 
-The main program is `ThesaurusEngine.py`. My best efforts to package this into an executable were in vain. I've tried many but `lemminflect` seems to disagree with them all. 
+The main program is `ThesaurusEngine.py`. My best efforts to package this into an executable were in vain. I've tried many methods but `lemminflect` seems to disagree with them all. 
 
-Note that this program will **not** fix your spelling, punctuation, and grammar. These will only be made worse if entered wrong.
+Note that this program will **not** fix your spelling, punctuation, and grammar — these will only be made worse if entered wrong.
 
 #### Dependencies
 
