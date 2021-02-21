@@ -20,7 +20,7 @@ Tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 logger = logging.getLogger()
 
 
-# apropos punctuation
+# relevant punctuation
 PunctStr = '!#$%&\'*+-/=/?@\\^_`|~'
 PunctSet = set(PunctStr)
 
@@ -51,7 +51,6 @@ CracksDict = {'have': 'have', 'has': 'have', 'had': 'have', 'be': 'be', 'is': 'b
 
 # ### Functions
 
-# private
 def _translateTag(tag , fmt):
     """ Convert tags from universal tagset to either WordNet or LemmInflect format. """
     # shouldn't handle MOD or AUX tags, those should bypass this as they are immutable.
@@ -67,15 +66,15 @@ def _translateTag(tag , fmt):
     return otag
 
 
-def _synoname(wordobj):
+def _synonymName(wordobj):
     """ Return just the synonym (no metadata) from a WordNet synset object. """
     # surely there's an 'official' way to retrieve the word??
     return wordobj.name().split('.')[0] if type(wordobj) is nltk.corpus.reader.wordnet.Synset else wordobj
 
 
+# # # # # # # # # # # # # # #
 
 
-# principal
 def extract(raw):
     """ Extract information from text at the word level, unaggregated (e.g. at the sentence level). """
     # builds [("word1","tag1") , ("word2","tag2") , ... ]
@@ -114,14 +113,14 @@ def synonymise(wordtags):
         synonyms = list(filter( lambda syn:(wnTag in ValidWNTags) , synonyms ))
         
         # collocations will have an underscore rather than a space, let's fix that:
-        synonyms = list(map( lambda syn:_synoname(syn).replace("_"," ") , synonyms ))
+        synonyms = list(map( lambda syn:_synonymName(syn).replace("_"," ") , synonyms ))
         
         #custom distribution so earlier synonyms are more favourable:
         # [1]
         # [1/2  1/2]
         # [1/2  1/4  1/4]
         # [1/2  1/4  1/8  1/8]
-        # [1/2  1/4  1/8  1/16  1/16]a\
+        # [1/2  1/4  1/8  1/16  1/16]
         dist = [2**(-i-1) for i in range(len(synonyms)-1)]
         dist.append( 1 - sum(dist) )
         
@@ -158,7 +157,7 @@ def inflect(wordtags):
 
 
 def assemble(wordtags):
-    """ Autobots, assemble! """
+    """ () """
     first = True
     logging.disable(logging.CRITICAL)
     for word,tag in wordtags:
@@ -167,9 +166,9 @@ def assemble(wordtags):
         
         # conditions in case of contractions or punctuation:
         wordset = set(word)
-        hasPunct = bool( wordset & PunctSet )
         
         # without apostrophe, contractions have no punctuation:
+        hasPunct = bool( wordset & PunctSet )
         isContraction = hasPunct and not bool( (wordset - {"'"}) & PunctSet )
         isClauseDelim = not bool( wordset - DelimSet )
         isParentheses = not bool( wordset - ParenSet )
